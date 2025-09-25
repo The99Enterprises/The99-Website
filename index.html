@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>THE99 ENTERPRISES</title>
+  <style>
+    :root {
+      --nav: #063052;
+      --accent: #0f7bcf;
+      --muted: #6b7280;
+      --bg: #fbfdff;
+    }
+
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: #0b1220;
+    }
+
+    /* Header & Navigation */
+    .header {
+      background: #fff;
+      border-bottom: 1px solid #e6eef6;
+      position: sticky;
+      top: 0;
+      z-index: 60;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand img { height: 56px; width: auto; }
+    .tagline { font-size: 12px; color: var(--muted); }
+    .navlinks {
+      margin-left: auto;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    a { color: var(--nav); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .btn {
+      background: var(--nav);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 8px;
+    }
+
+    /* Hero Section */
+    .hero { padding: 48px 0; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 28px;
+      align-items: center;
+    }
+    .h-title { font-size: 30px; margin: 0; color: var(--nav); }
+    .h-lead { color: var(--muted); line-height: 1.5; }
+
+    /* Cards & Layout */
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 6px 18px rgba(15,20,36,0.04);
+    }
+    .card-img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; }
+    .cert-img { width: 100%; max-width: 720px; border-radius: 8px; border: 1px solid #e6eef6; }
+    .section { padding: 50px 0; }
+    .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+    .grid img { width: 100%; height: 220px; object-fit: cover; border-radius: 8px; }
+    .muted { color: var(--muted); }
+    .small { font-size: 14px; }
+    .btn-row { display: flex; gap: 10px; margin-top: 16px; }
+
+    footer {
+      padding: 20px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      background: #fff;
+      margin-top: 20px;
+    }
+
+    /* Responsive */
+    @media(max-width:900px){
+      .hero-grid{grid-template-columns:1fr;}
+      .grid{grid-template-columns:repeat(2,1fr);}
+      .navlinks{display:none;}
+    }
+    @media(max-width:520px){
+      .grid{grid-template-columns:1fr;}
+      .brand img{height:44px;}
+      .h-title{font-size:22px;}
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <div class="brand">
+      <img src="logo.jpg" alt="THE99 logo">
+      <div>
+        <strong>THE99 ENTERPRISES</strong>
+        <div class="tagline">Books & Stationery</div>
+      </div>
+    </div>
+    <nav class="navlinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact" class="btn">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Home -->
+<main class="container" id="home">
+  <section class="section hero">
+    <div class="hero-grid">
+      <div>
+        <h1 class="h-title">Quality books & stationery to support learning and success.</h1>
+        <p class="h-lead">THE99 ENTERPRISES — founded by Louis Emmanuel Ijeokwu. We provide reliable textbooks, notebooks and stationery items for students and schools. Located in Abuja / FCT.</p>
+        <div class="btn-row">
+          <a href="#gallery" class="btn">Shop Products</a>
+          <a href="#about" class="btn">Learn More</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Featured Pack</h3>
+        <img src="gallery1.jpg" alt="Featured" class="card-img">
+        <strong>Back to School Pack</strong>
+        <p class="muted">Notebooks, pens and essential stationery for students.</p>
+        <div class="btn-row">
+          <a href="#contact" class="btn">Order Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- About -->
+<section class="container section" id="about">
+  <div class="card">
+    <h2>About THE99 ENTERPRISES</h2>
+    <p class="muted">THE99 ENTERPRISES is registered under the Companies and Allied Matters Act 2020 and specializes in sales of books and stationeries. Our mission is to make learning resources accessible and affordable.</p>
+    <ul class="muted">
+      <li>Verified CAC registration</li>
+      <li>Quality control on all products</li>
+      <li>Fast local delivery & bulk order support</li>
+    </ul>
+  </div>
+
+  <div class="card cert" style="margin-top:20px;">
+    <p class="muted">Certificate of Registration — Corporate Affairs Commission (CAC).</p>
+    <img src="certificate.jpg" alt="CAC Certificate" class="cert-img">
+    <div class="muted small">Registered Business Name No: 8084200 — Companies and Allied Matters Act 2020</div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="container section" id="gallery">
+  <h2>Gallery</h2>
+  <div class="grid">
+    <div class="card"><img src="gallery1.jpg" alt="Notebooks"><div class="muted">Notebooks & Pens</div></div>
+    <div class="card"><img src="gallery2.jpg" alt="Stationery"><div class="muted">Stationery Shelves</div></div>
+    <div class="card"><img src="gallery3.jpg" alt="Tech"><div class="muted">Inspiration: Tech & Growth</div></div>
+    <div class="card"><img src="gallery4.jpg" alt="Stationery"><div class="muted">Shelved Stationery</div></div>
+    <div class="card"><img src="gallery5.jpg" alt="Notebooks"><div class="muted">Classic Notebooks</div></div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="container section" id="contact">
+  <div class="card">
+    <h2>Contact</h2>
+    <p class="contact">📩 Email: <a href="mailto:louis.e.ijeokwu@gmail.com">louis.e.ijeokwu@gmail.com</a></p>
+    <p>🌐 LinkedIn: <a href="https://linkedin.com/in/louis-ijeokwu" target="_blank">linkedin.com/in/louis-ijeokwu</a></p>
+    <p>📸 Instagram: <a href="https://instagram.com/the99enterprises" target="_blank">instagram.com/the99enterprises</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © 2025 Louis E. Ijeokwu | THE99 ENTERPRISES
+  </div>
+</footer>
+
+</body>
+</html>
